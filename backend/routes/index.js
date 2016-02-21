@@ -51,7 +51,7 @@ router.get('/', function(req, res, next) {
 
 
   Highscore.find({}).limit(10).sort({'puntuacion':'desc'}).exec(function(err, hs){
-    res.render('index', { highscores: hs, moment : moment });
+    res.render('index', { highscores: hs, moment : moment, title:"Mom I droppped my iPad" });
   });
 });
 
