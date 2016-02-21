@@ -11,6 +11,9 @@ import UIKit
 import CoreMotion
 import SocketIOClientSwift
 import AVFoundation
+import SwiftyJSON
+import Alamofire
+
 
 
 class Load {
@@ -20,7 +23,7 @@ class Load {
 }
 
 
-class TurnViewController: UIViewController, AVAudioPlayerDelegate {
+class TurnViewController: UIViewController, AVAudioPlayerDelegate, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var counter: UILabel!
     var startTime = NSTimeInterval()
@@ -33,8 +36,15 @@ class TurnViewController: UIViewController, AVAudioPlayerDelegate {
     var songAudioPlayer = AVAudioPlayer()
     var gameIsPlaying = false
     var puntuacion = 0
+    var topGames : JSON = JSON("")
     @IBOutlet weak var restartButton: UIButton!
     @IBOutlet weak var textArea: UITextView!
+    @IBOutlet weak var tableView: TopGamesTableView!
+    
+    
+    var formater = NSDateFormatter()
+
+    
     
     
     func playSound(soundName: String)
@@ -75,6 +85,8 @@ class TurnViewController: UIViewController, AVAudioPlayerDelegate {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
         let psytrance = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("psytrance", ofType: "mp3")!)
         do{
             songAudioPlayer = try AVAudioPlayer(contentsOfURL:psytrance)
@@ -82,6 +94,25 @@ class TurnViewController: UIViewController, AVAudioPlayerDelegate {
             songAudioPlayer.numberOfLoops = -1
             songAudioPlayer.delegate = self
         }catch{}
+        
+        Alamofire.request(Router.Top())
+            .responseJSON { response in
+                print(response.result.value)
+                if (response.result.value != nil)
+                {
+                    let swiftyJson = JSON(response.result.value!)
+
+                    self.topGames = swiftyJson
+                    self.tableView.reloadData()
+//                    print(self.topGames)
+                }
+                else
+                {
+                    print("ERROR Json is nil")
+                }
+        }
+        
+        
         restartButton(restartButton)
     }
     
@@ -220,12 +251,49 @@ class TurnViewController: UIViewController, AVAudioPlayerDelegate {
     
     
     
-    //        socket.on("startgame")
-    //        {
-    //            data, ack in
-    //            print("socket.on('startgame')")
-    //        }
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("topGameCell") as?  TopGameTableViewCell!
+        
+        if (indexPath.row == 0)
+        {
+            cell!.position.text = "#"
+            cell!.name.text = "Name"
+            cell!.score.text = "Score"
+            cell!.when.text = "Date"
+        }
+        else
+        {
+            cell!.position.text = String(indexPath.row)
+            cell!.name.text = self.topGames[indexPath.row]["nombre"].string
+            cell!.score.text = String( self.topGames[indexPath.row]["puntuacion"].intValue )
+                
+//            
+//            let mydate : NSDateFormatter = NSDateFormatter()
+//            mydate.dateFormat = "dd-MM-YYYY"
+//            
+//            let formatedDate : NSDate? = mydate.dateFromString( self.topGames[indexPath.row]["date"].string! )
+            
+            var string1 = self.topGames[indexPath.row]["date"].string!
+            var index1 = string1.endIndex.advancedBy(-14)
+            var substring1 = string1.substringToIndex(index1)
+            
+            
+            cell!.when.text = String( substring1 )
+            cell!.view.backgroundColor = UIColor.clearColor()
+        }
+        return cell!
+    }
     
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        print(self.topGames.count)
+        return self.topGames.count
+    }
     
-    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+//        self.tableView.contentInset = UIEdgeInsetsMake(0,0,55,0)
+    }
+
 }
