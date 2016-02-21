@@ -10,7 +10,7 @@ var Highscore =  require('../model/highscore');
 
 
 router.get('/top', function(req, res, next){
-  Highscore.find({}).limit(5).sort({'puntuacion':'desc'}).exec(function(err, hs){
+  Highscore.find({}).limit(20).sort({'puntuacion':'desc'}).exec(function(err, hs){
     if(hs != null && err == null){
       res.json(hs);
     }
