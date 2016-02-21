@@ -17,7 +17,7 @@
                BlueprintIdentifier = "9C3006461C787C0A00938E33"
                BuildableName = "Mom I droped my iPad.app"
                BlueprintName = "Mom I droped my iPad"
-               ReferencedContainer = "container:Mom I droped my iPad.xcodeproj">
+               ReferencedContainer = "container:Mom, I dropped my iPad.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "9C30065D1C787C0B00938E33"
                BuildableName = "Mom I droped my iPadTests.xctest"
                BlueprintName = "Mom I droped my iPadTests"
-               ReferencedContainer = "container:Mom I droped my iPad.xcodeproj">
+               ReferencedContainer = "container:Mom, I dropped my iPad.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -45,7 +45,7 @@
                BlueprintIdentifier = "9C3006681C787C0B00938E33"
                BuildableName = "Mom I droped my iPadUITests.xctest"
                BlueprintName = "Mom I droped my iPadUITests"
-               ReferencedContainer = "container:Mom I droped my iPad.xcodeproj">
+               ReferencedContainer = "container:Mom, I dropped my iPad.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,7 +55,7 @@
             BlueprintIdentifier = "9C3006461C787C0A00938E33"
             BuildableName = "Mom I droped my iPad.app"
             BlueprintName = "Mom I droped my iPad"
-            ReferencedContainer = "container:Mom I droped my iPad.xcodeproj">
+            ReferencedContainer = "container:Mom, I dropped my iPad.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -78,7 +78,7 @@
             BlueprintIdentifier = "9C3006461C787C0A00938E33"
             BuildableName = "Mom I droped my iPad.app"
             BlueprintName = "Mom I droped my iPad"
-            ReferencedContainer = "container:Mom I droped my iPad.xcodeproj">
+            ReferencedContainer = "container:Mom, I dropped my iPad.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -97,7 +97,7 @@
             BlueprintIdentifier = "9C3006461C787C0A00938E33"
             BuildableName = "Mom I droped my iPad.app"
             BlueprintName = "Mom I droped my iPad"
-            ReferencedContainer = "container:Mom I droped my iPad.xcodeproj">
+            ReferencedContainer = "container:Mom, I dropped my iPad.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
