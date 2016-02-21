@@ -27,27 +27,35 @@ th{
 }
 
 .a{
-  color: blue
+  color: #333399;
 }
 
 .b{
-  color: green
+  color: #3399FF;
 }
 
 .c{
-color: yellow
+color: #3366CC;
 }
 
 .d{
-color: pink
+color: #333399;
 }
 
 .e{
-  color: blue;
+  color: #3366CC;
 }
 
 
 
 .f{
   color:white;
+}
+
+.pequeno{
+  font-size: 1em;
+}
+
+.grande{
+  font-size: 4.5em;
 }
