@@ -22,4 +22,46 @@ h1{
 
 th{
   text-decoration: bold;
+  background-color: white;
+  color: black;
+}
+
+.a{
+  color: #333399;
+}
+
+.b{
+  color: #3399FF;
+}
+
+.c{
+color: #3366CC;
+}
+
+.d{
+color: #333399;
+}
+
+.e{
+  color: #3366CC;
+}
+
+
+
+.f{
+  color:white;
+}
+
+.pequeno{
+  font-size: 1em;
+}
+
+.grande{
+  font-size: 4.5em;
+}
+
+
+.jumbotron{
+  text-align: center;
+  color: #111111;
 }

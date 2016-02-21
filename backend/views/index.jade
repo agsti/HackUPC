@@ -1,7 +1,12 @@
 extends layout
 
 block content
-  h1 TOP BEST PLAYERS WHO DIDN'T DROP THEIR IPADS
+  a(href="http://momidroppedmyipad.com")#title
+    h1(style={"display":"inline-block"}).b.grande mom 
+    h1(style={"display":"inline-block"}).g.grande i 
+    h1(style={"display":"inline-block"}).d.grande droppped 
+    h1(style={"display":"inline-block"}).g.grande my 
+    h1(style={"display":"inline-block"}).f.grande ipad 
   table.table
     tr
       th #
@@ -14,10 +19,15 @@ block content
         td #{hs.nombre}
         td #{hs.puntuacion}
         td #{moment(hs.date).fromNow()}
-      
-      
-  button#start Start
-  button#end End
+  div.jumbotron 
+    p 
+      a(href="./assets/src.zip") Download Source
+    p 
+      a(href="http://www.idownloadblog.com/2015/10/12/how-to-sideload-apps-on-iphone-ipad-ios-9/") IOS9 supports sideloading, 
+      | you can play 
+      a(href="https://www.instagram.com/explore/tags/droppedmyipad/") too!
+  button#start.hidden Start
+  button#end.hidden End
   script(src="/javascripts/jquery.min.js")
   script(src="/javascripts/jquery-ui.min.js")
   script(src="/socket.io/socket.io.js")

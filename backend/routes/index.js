@@ -9,29 +9,38 @@ var Highscore =  require('../model/highscore');
 
 
 
-/* GET home page. */
+router.get('/top', function(req, res, next){
+  Highscore.find({}).limit(5).sort({'puntuacion':'desc'}).exec(function(err, hs){
+    if(hs != null && err == null){
+      res.json(hs);
+    }
+    else{
+      res.send();
+    }
+  });
+});
 
-router.post('/', function(req, res){
-  	var newHighscore = new Highscore({
-  		nombre: req.body.nombre,
-      puntuacion: req.body.puntuacion,
-      date: Date.now()
 
-  	});
-  	newHighscore.save(function(err, highscore){
-  		if(err){
-  			console.log(err);
-  			res.status(500).send("Internal Error");
-  		}
-  		else{
-  			console.log("new highscore created: "+highscore.usuario);
-  			res.redirect("back");
-  		}
+router.post('/game', function(req, res){
+  var newHighscore = new Highscore({
+    nombre: req.body.name,
+    puntuacion: req.body.score,
+    date: Date.now()
 
-    });
-  }
-  );
+  });
+  newHighscore.save(function(err, highscore){
+    if(err){
+      console.log(err);
+      res.send("OK");
+    }
+    else{
+      console.log("new highscore created: "+highscore.usuario);
+      res.send("NO");
+    }
 
+  });
+
+});
 
 
 router.get('/', function(req, res, next) {
