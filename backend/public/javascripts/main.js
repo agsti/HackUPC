@@ -1,9 +1,26 @@
 
+function shuffle(o) {
+  var j, x;
+  for (var i = o.length; i; i -= 1) {
+    j = Math.floor(Math.random() * i);
+    x = o[i-1];
+    o[i-1] = o[j];
+    o[j] = x;
+  }
+
+  return o;
+}
+
+
 
 $().ready(function(){
 	var $body = $("body");
 	var socket = io();
+	var titleClasses = ["a", "b", "c", "d", "e", "f", "g"];
 
+
+
+	console.log(titleClasses);
 	$("#start").on("click", function(button){
 		socket.emit("startgame", Date.now());
 	});
@@ -11,11 +28,13 @@ $().ready(function(){
 		socket.emit("endgame", "agus");
 	});
 
+	var $titulo = $("#title");
 
+	var music = new Audio('../assets/psytrance.mp3');
 	var playing = false;
 	socket.on('startgame', function(){
 		playing = true;
-
+		music.play();
 	});
 
 	socket.on('endgame', function(){
@@ -39,11 +58,17 @@ $().ready(function(){
 			var dir = ["left", "up"];
 			var d;
 			if (Math.random() > 0.5){
-				d = 0
+				d = 0;
 			}
 			else{
-				d = 1
+				d = 1;
 			}
+
+			// for (var i = 0; i< $titulo.children().length ; i++) {
+			// 	var elemento  = $titulo.children()[i];
+			//
+			// }
+
 
 			var times = Math.round(Math.random()*10);
 			var distance =  Math.round(Math.random()*100);

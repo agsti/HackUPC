@@ -17,7 +17,7 @@ module.exports = function(io){
 
 			var newHighscore = new Highscore({
 	  		nombre: nombre,
-	      puntuacion: (elapsedTime/10000)*(elapsedTime/10000),
+	      puntuacion: Math.round((elapsedTime/2323)*(elapsedTime/2323)),
 	      date: Date.now()
 
 	  	});

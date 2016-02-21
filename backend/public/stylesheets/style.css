@@ -22,4 +22,32 @@ h1{
 
 th{
   text-decoration: bold;
+  background-color: white;
+  color: black;
+}
+
+.a{
+  color: blue
+}
+
+.b{
+  color: green
+}
+
+.c{
+color: yellow
+}
+
+.d{
+color: pink
+}
+
+.e{
+  color: blue;
+}
+
+
+
+.f{
+  color:white;
 }
