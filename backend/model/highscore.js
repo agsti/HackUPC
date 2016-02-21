@@ -4,7 +4,8 @@ var Schema = mongoose.Schema;
 var HighscoreSchema = Schema({
 	nombre: {type: String, required: true },
 	puntuacion: {type: Number, required: true},
-	date:{type:Date}
+	date:{type:Date},
+	fromNow:{type:String}
 
 });
 

@@ -7,11 +7,15 @@ var Highscore =  require('../model/highscore');
 
 
 
-
+var moment = require('moment');
 
 router.get('/top', function(req, res, next){
   Highscore.find({}).limit(20).sort({'puntuacion':'desc'}).exec(function(err, hs){
     if(hs != null && err == null){
+
+      for (var i = 0; i< hs.length; i++) {
+        hs[i].fromNow = moment(hs[i].date).fromNow();
+      }
       res.json(hs);
     }
     else{
@@ -47,7 +51,7 @@ router.get('/', function(req, res, next) {
 
 
   Highscore.find({}).limit(10).sort({'puntuacion':'desc'}).exec(function(err, hs){
-    res.render('index', { highscores: hs, moment :require('moment') });
+    res.render('index', { highscores: hs, moment : moment });
   });
 });
 
