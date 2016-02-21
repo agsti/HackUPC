@@ -1,0 +1,25 @@
+
+@font-face {
+    font-family: minecraftia;
+    src: url(../fonts/minecraftia.ttf);
+}
+
+body {
+  padding: 50px;
+  font: 14px minecraftia, Helvetica, Arial, sans-serif;
+  color:white;
+  background-color: black
+}
+
+a {
+  color: #00B7FF;
+}
+
+h1{
+  color:red;
+  text-align: center;
+}
+
+th{
+  text-decoration: bold;
+}

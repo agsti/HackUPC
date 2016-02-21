@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1 TOP BEST PLAYERS WHO DIDN'T DROP THEIR IPADS
+  table.table
+    tr
+      th #
+      th Name
+      th Highscore
+      th When
+    each hs,index in highscores
+      tr 
+        td #{index + 1 } 
+        td #{hs.nombre}
+        td #{hs.puntuacion}
+        td #{moment(hs.date).fromNow()}
+      
+      
+  button#start Start
+  button#end End
+  script(src="/javascripts/jquery.min.js")
+  script(src="/javascripts/jquery-ui.min.js")
+  script(src="/socket.io/socket.io.js")
+  script(src="/javascripts/main.js")
+    
