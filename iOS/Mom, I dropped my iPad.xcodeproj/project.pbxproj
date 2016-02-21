@@ -23,6 +23,8 @@
 		9CA80B611C792D27008F607A /* glass.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9CA80B601C792D27008F607A /* glass.mp3 */; };
 		9CD32C7E1C796ABF0012DCC9 /* router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32C7D1C796ABF0012DCC9 /* router.swift */; };
 		9CD32C801C7971E30012DCC9 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32C7F1C7971E30012DCC9 /* Api.swift */; };
+		9CD32C821C799E430012DCC9 /* TopGamesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32C811C799E430012DCC9 /* TopGamesTableView.swift */; };
+		9CD32C841C799EA70012DCC9 /* TopGameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32C831C799EA70012DCC9 /* TopGameTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		9CA80B601C792D27008F607A /* glass.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = glass.mp3; sourceTree = "<group>"; };
 		9CD32C7D1C796ABF0012DCC9 /* router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = router.swift; sourceTree = "<group>"; };
 		9CD32C7F1C7971E30012DCC9 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		9CD32C811C799E430012DCC9 /* TopGamesTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopGamesTableView.swift; sourceTree = "<group>"; };
+		9CD32C831C799EA70012DCC9 /* TopGameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopGameTableViewCell.swift; sourceTree = "<group>"; };
 		B89B6B19F2684A3CD6735996 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +144,8 @@
 				9C30067D1C78814900938E33 /* TurnViewController.swift */,
 				9CD32C7D1C796ABF0012DCC9 /* router.swift */,
 				9CD32C7F1C7971E30012DCC9 /* Api.swift */,
+				9CD32C811C799E430012DCC9 /* TopGamesTableView.swift */,
+				9CD32C831C799EA70012DCC9 /* TopGameTableViewCell.swift */,
 			);
 			path = "Mom I droped my iPad";
 			sourceTree = "<group>";
@@ -373,7 +379,9 @@
 				9C30067E1C78814900938E33 /* TurnViewController.swift in Sources */,
 				9CD32C801C7971E30012DCC9 /* Api.swift in Sources */,
 				9CD32C7E1C796ABF0012DCC9 /* router.swift in Sources */,
+				9CD32C841C799EA70012DCC9 /* TopGameTableViewCell.swift in Sources */,
 				9C3006531C787C0A00938E33 /* Mom_I_droped_my_iPad.xcdatamodeld in Sources */,
+				9CD32C821C799E430012DCC9 /* TopGamesTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
