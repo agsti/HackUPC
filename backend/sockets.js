@@ -11,9 +11,28 @@ module.exports = function(io){
 			startedGames[socket] = Date.now();
 	  });
 
-	  socket.on('endgame', function(){
+	  socket.on('endgame', function(nombre){
 
 			var elapsedTime = Date.now()-startedGames[socket];
+
+			var newHighscore = new Highscore({
+	  		nombre: nombre,
+	      puntuacion: (elapsedTime/10000)*(elapsedTime/10000),
+	      date: Date.now()
+
+	  	});
+	  	newHighscore.save(function(err, highscore){
+	  		if(err){
+	  			console.log(err);
+	  		}
+	  		else{
+	  			console.log("new highscore created: "+highscore.usuario);
+	  		}
+
+	    });
+
+
+
 	    console.log("game ended: "+elapsedTime);
 			io.sockets.emit('endgame', null);
 
