@@ -21,6 +21,8 @@
 		9CA80B401C791479008F607A /* bep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9CA80B3E1C791479008F607A /* bep.mp3 */; };
 		9CA80B5F1C7926FA008F607A /* psytrance.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9CA80B5E1C7926FA008F607A /* psytrance.mp3 */; };
 		9CA80B611C792D27008F607A /* glass.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9CA80B601C792D27008F607A /* glass.mp3 */; };
+		9CD32C7E1C796ABF0012DCC9 /* router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32C7D1C796ABF0012DCC9 /* router.swift */; };
+		9CD32C801C7971E30012DCC9 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32C7F1C7971E30012DCC9 /* Api.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		9CA80B3E1C791479008F607A /* bep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bep.mp3; sourceTree = "<group>"; };
 		9CA80B5E1C7926FA008F607A /* psytrance.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = psytrance.mp3; sourceTree = "<group>"; };
 		9CA80B601C792D27008F607A /* glass.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = glass.mp3; sourceTree = "<group>"; };
+		9CD32C7D1C796ABF0012DCC9 /* router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = router.swift; sourceTree = "<group>"; };
+		9CD32C7F1C7971E30012DCC9 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		B89B6B19F2684A3CD6735996 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,6 +138,8 @@
 				9C3006591C787C0A00938E33 /* Info.plist */,
 				9C3006511C787C0A00938E33 /* Mom_I_droped_my_iPad.xcdatamodeld */,
 				9C30067D1C78814900938E33 /* TurnViewController.swift */,
+				9CD32C7D1C796ABF0012DCC9 /* router.swift */,
+				9CD32C7F1C7971E30012DCC9 /* Api.swift */,
 			);
 			path = "Mom I droped my iPad";
 			sourceTree = "<group>";
@@ -258,7 +264,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9C3006421C787C0A00938E33 /* Build configuration list for PBXProject "Mom I droped my iPad" */;
+			buildConfigurationList = 9C3006421C787C0A00938E33 /* Build configuration list for PBXProject "Mom, I dropped my iPad" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -365,6 +371,8 @@
 				9C30064D1C787C0A00938E33 /* ViewController.swift in Sources */,
 				9C30064B1C787C0A00938E33 /* AppDelegate.swift in Sources */,
 				9C30067E1C78814900938E33 /* TurnViewController.swift in Sources */,
+				9CD32C801C7971E30012DCC9 /* Api.swift in Sources */,
+				9CD32C7E1C796ABF0012DCC9 /* router.swift in Sources */,
 				9C3006531C787C0A00938E33 /* Mom_I_droped_my_iPad.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,7 +519,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Mom I droped my iPad/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Fanious.Mom-I-droped-my-iPad";
+				PRODUCT_BUNDLE_IDENTIFIER = "Fanious.Mom-I-dropped-my-iPad";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -525,7 +533,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Mom I droped my iPad/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Fanious.Mom-I-droped-my-iPad";
+				PRODUCT_BUNDLE_IDENTIFIER = "Fanious.Mom-I-dropped-my-iPad";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -582,7 +590,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9C3006421C787C0A00938E33 /* Build configuration list for PBXProject "Mom I droped my iPad" */ = {
+		9C3006421C787C0A00938E33 /* Build configuration list for PBXProject "Mom, I dropped my iPad" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9C3006701C787C0B00938E33 /* Debug */,
