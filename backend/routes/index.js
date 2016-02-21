@@ -21,10 +21,10 @@ router.get('/top', function(req, res, next){
 });
 
 
-router.post('/partida', function(req, res){
+router.post('/game', function(req, res){
   var newHighscore = new Highscore({
-    nombre: req.body.nombre,
-    puntuacion: req.body.puntuacion,
+    nombre: req.body.name,
+    puntuacion: req.body.score,
     date: Date.now()
 
   });
