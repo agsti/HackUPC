@@ -34,6 +34,7 @@ $().ready(function(){
 	var playing = false;
 	socket.on('startgame', function(){
 		playing = true;
+		music.currentTime = 0
 		music.play();
 	});
 
